@@ -104,6 +104,8 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
 	[self addGestureRecognizer:panGesture];
 }
 -(void)setFieldOfView:(float)fieldOfView{
+	if(fieldOfView < FOV_MIN) fieldOfView = FOV_MIN;
+	else if(fieldOfView > 65) fieldOfView = 65;
 	_fieldOfView = fieldOfView;
 	[self rebuildProjectionMatrix];
 }
