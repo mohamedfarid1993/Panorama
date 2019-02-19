@@ -13,7 +13,7 @@
 
 #define FPS 60
 #define FOV_MIN 1
-#define FOV_MAX 155
+#define FOV_MAX 100
 #define Z_NEAR 0.1f
 #define Z_FAR 100.0f
 
