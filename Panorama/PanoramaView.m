@@ -13,7 +13,7 @@
 
 #define FPS 60
 #define FOV_MIN 1
-#define FOV_MAX 100
+#define FOV_MAX 65
 #define Z_NEAR 0.1f
 #define Z_FAR 100.0f
 
@@ -355,7 +355,7 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
 	if([sender state] == 2){
 		CGFloat newFOV = zoom / [sender scale];
 		if(newFOV < FOV_MIN) newFOV = FOV_MIN;
-		else if(newFOV > FOV_MAX) newFOV = FOV_MAX;
+		else if(newFOV > 65) newFOV = 65;
 		[self setFieldOfView:newFOV];
 	}
 	if([sender state] == 3){
